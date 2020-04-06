@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>H09Form03</title>
+</head>
+
+<body>
+	<h2>input태그의 버튼속성</h2>
+	<fieldset>
+		<form action="">
+			이름 : <input type="text" name="name" value="코스모" />
+			<br />
+			직업 :
+			<input type="radio" name="job" value="S" checked="checked" />학생 &nbsp;&nbsp;
+			<input type="radio" name="job" value="Y" />강사
+			<br />
+			자기소개 :
+			<textarea name="intro" id="" cols="50" rows="5">내용은 여기에 입력됩니다.</textarea>
+			<br />
+			<input type="image" src="./images/button.jpg" />
+			<br />
+			<input type="submit" value="전송" />
+			<br />
+			<input type="reset" value="리셋" />
+			<br />
+			<button type="button" onclick="alert('경고창입니다.');">버튼타이틀</button>
+			<br />
+			<input type="button" onmouseover="alert('마우스올렸나요?');" value="MouseOver이벤트" />&nbsp;&nbsp;
+			<input type="button" onmouseout="alert('마우스내렸나요?');" value="MouseOut이벤트" />
+		</form>
+	</fieldset>
+</body>
+
+</html>

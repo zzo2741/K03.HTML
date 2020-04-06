@@ -148,13 +148,30 @@
 	 -->
 	<script>
 	function textArea() {
-		var v = getElementById("intro").value;
+		/*
+		textarea태그는 value속성은 없으나 javascript에서 접근할 때는 value속성을 통해 값을 가져오거나 변경할 수 있다.
+		*/
+		// textarea의 값을 설정
+		document.getElementById("intro").value = "내용바꿈";
+		// textarea의 값을 읽어와서 변수에 저장됨
+		var v = document.getElementById("intro").value;
+		//JS의 기본경고창을 통해 내용 출력
 		alert(v);
 	}
 	</script>
 	<h3>textarea태그</h3>
-	<textarea name="intro" id="" cols="70" rows="5">내용은 여기에 입력됩니다.</textarea>
+	<textarea name="intro" id="intro" cols="70" rows="5">내용은 여기에 입력됩니다.</textarea>
 	<input type="button" onclick="textArea();" value = "난버튼"/>
+	
+	<!-- 
+   	onclick 은 클릭이벤트를 감지하는 '이벤트핸들러' 혹은 '이벤트리스너'라고 한다.
+    -->
+
+
+   	<!-- 
+   	-화면상에서는 보이지 않으나 서버로 전송은 필요할때 사용된다.
+   	-주로 회원정보수정이나 게시글수정에서 많이 사용된다.
+   	-->
 	
 	<h3>type = "hidden"</h3>
 	<form action="">
