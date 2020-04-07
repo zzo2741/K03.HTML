@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>table 태그</h2>
+    <!-- 
+        table태그의 속성
+            cellpadding : 셀과 컨텐츠 사이의 여백을 지정한다.
+            cellspacing : 셀과 셀 사이의 여백을 지정한다.
+        table태그 : 표현대로 컨텐츠를 표현하기 위한 태그. 하위태그로 tr, th, td가 있다.
+            <tr> : 행을 표현
+            <td> : 셀을 표현
+            <th> : <td>와 동일하지만 텍스트에 bold, center 효과를 자동으로 부여한다.
+     -->
+    <h3>table 태그의 속성을 이용한 테이블 디자인</h3>
+
+    <table border="5" cellpadding = "5" cellspacing = "5" bgcolor="" width=200>
+        <tr>
+            <td>가</td>
+            <td>나</td>
+            <td>다</td>
+        </tr>
+        <tr>
+            <td>라</td>
+            <td>마</td>
+            <td><img src="./images/apple.png" alt="사과"></td>
+        </tr>
+    </table>
+
+    <h3>CSS속성을 이용한 테이블 디자인</h3>
+    <table style="border-spacing: 10px; background-color: orange;">
+        <tr>
+            <td style="padding: 5px; border: 1px solid black;">가</td>
+            <td style="padding: 5px; border: 1px solid blue;">나</td>
+            <td style="padding: 5px; border: 1px solid red;">다</td>
+        </tr>
+        <tr>
+            <td style="padding: 5px; border: 1px solid green;">라</td>
+            <td style="padding: 15px; border: 1px solid purple;">마</td>
+            <td style="padding: 5px; border: 1px solid skyblue;">
+                <img src="./images/banana.png" alt="바나나">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
