@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>H09Form02.html</title>
+	<meta charset="UTF-8">
+	<title>H09Form02.html</title>
 </head>
+
 <body>
 	<h2>form태그의 하위요소가 되는 태그들</h2>
 
@@ -29,11 +31,10 @@
 		readonly : 일기 전용으로 설정하는 속성. 입력, 수정은 할 수 없으나 서버로 전송은 가능함.
 	 -->
 	<form name="frm1">
-		기본텍스트상자 : <input type="text" name="n1" value="이준승" /> <br /> <br /> disabled속성 : <input
-			type="text" name="n2" size="40" maxlength="5" value="속성추가" disabled="disabled"
-		/> <br /> <br /> maxlength속성 : <input type="text" name="jumin1" size="6" maxlength="6" /> - <input
-			type="password" size="7" maxlength="7"
-		/> <br /> <br /> readonly속성 : <input type="text" name="homepage" value="http://" readonly /> <br />
+		기본텍스트상자 : <input type="text" name="n1" value="이준승" /> <br /> <br /> disabled속성 : <input type="text" name="n2"
+			size="40" maxlength="5" value="속성추가" disabled="disabled" /> <br /> <br /> maxlength속성 : <input type="text"
+			name="jumin1" size="6" maxlength="6" /> - <input type="password" size="7" maxlength="7" /> <br /> <br />
+		readonly속성 : <input type="text" name="homepage" value="http://" readonly /> <br />
 		<br /> <input type="submit" value="서버로 전송하기" />
 	</form>
 	<br />
@@ -65,15 +66,15 @@
 	<fieldset>
 		<legend> 당신의 관심사항은 뭔가요?</legend>
 		<form name="form2">
-			<input type="checkbox" name = "inter" value="pol" checked="checked"/>정치 &nbsp;&nbsp;
-			<input type="checkbox" name = "inter" value="eco" />경제 &nbsp;&nbsp;
-			<input type="checkbox" name = "inter" value="ent" />연예 &nbsp;&nbsp;
-			<input type="checkbox" name = "inter" value="spo" />스포츠 &nbsp;&nbsp;
+			<input type="checkbox" name="inter" value="pol" checked="checked" />정치 &nbsp;&nbsp;
+			<input type="checkbox" name="inter" value="eco" />경제 &nbsp;&nbsp;
+			<input type="checkbox" name="inter" value="ent" />연예 &nbsp;&nbsp;
+			<input type="checkbox" name="inter" value="spo" />스포츠 &nbsp;&nbsp;
 			<br />
 			<input type="submit" value="체크박스전송" />
 		</form>
 	</fieldset>
-	
+
 	<!-- 
 	-라디오는 여러개의 항목 중 하나만 선택이 가능하다.
 	-그 외의 속성은 checkbox와 동일하다.
@@ -83,14 +84,14 @@
 	<fieldset>
 		<legend>당신의 성별은?</legend>
 		<form name="form3">
-			<input type="radio" name = "gender" value="M" checked="checked" />남자 &nbsp;&nbsp;
-			<input type="radio" name = "gender" value="W"  />여자 &nbsp;&nbsp;
-			<input type="radio" name = "gender" value="T"  />트렌스젠더 &nbsp;&nbsp;
+			<input type="radio" name="gender" value="M" checked="checked" />남자 &nbsp;&nbsp;
+			<input type="radio" name="gender" value="W" />여자 &nbsp;&nbsp;
+			<input type="radio" name="gender" value="T" />트렌스젠더 &nbsp;&nbsp;
 			<br />
-			<input type="submit" value="전송하기"/>
+			<input type="submit" value="전송하기" />
 		</form>
 	</fieldset>
-	
+
 	<!-- 
 	select태그 : 여러개의 목록중 하나를 선택할 때 사용하는 태그이다. 하위태그로 option이 있다.
 				여러 선택된 목록을 표시할 때는 selected = "selected" 속성을 추가한다.
@@ -104,18 +105,18 @@
 	<fieldset>
 		<legend>당신의 최종학력은 무엇인가요?</legend>
 		<form action="">
-		<select name="grade">
-			<option value="ele">초등학교</option>
-			<option value="mid">중학교</option>
-			<option value="high">고등학교</option>
-			<option value="uni">대학교</option>
-			<option value="uni2">대학원</option>
-		</select>
-		&nbsp;&nbsp;
-		<input type="image" src = "./images/button.jpg" />
+			<select name="grade">
+				<option value="ele">초등학교</option>
+				<option value="mid">중학교</option>
+				<option value="high">고등학교</option>
+				<option value="uni">대학교</option>
+				<option value="uni2">대학원</option>
+			</select>
+			&nbsp;&nbsp;
+			<input type="image" src="./images/button.jpg" />
 		</form>
 	</fieldset>
-	
+
 	<h3>select태그 - 여러개 선택</h3>
 	<fieldset>
 		<legend>당신이 좋아하는 연예인은?(다중선택가능)</legend>
@@ -126,58 +127,59 @@
 				<option value="J">제니</option>
 				<option value="J">이정연</option>
 				<option value="B">바보</option>
-			</select> 
+			</select>
 			&nbsp;&nbsp;
-			<input type="image" src = "./images/button.jpg" />
+			<input type="image" src="./images/button.jpg" />
 		</form>
 	</fieldset>
 	<!-- 
 	-서버로 전송할 파일선택 창을 띄워준다.
 	-전송할 파일의 포멧을 제한하고 싶을 때는 accept속성을 이용한다.
 	-file속성값이 있을 때는 value속성은 아무런 의미가 없다.
-	 --> 
+	 -->
 	<h3>type = "file"</h3>
-	기본 : <input type="file" name="userdile1"/>
+	기본 : <input type="file" name="userdile1" />
 	<br />
 	속성추가 : <input type="file" name="userfile2" accept=".jpg, .png, .gif" value="첨부파일을 추가" />
-	
+
 	<!-- 
 	-다른 태그와는 다르게 value속성을 가지고 있지 않고, 태그사이에 입력되는 값이 value가 된다.
 	-단, Javascript에서 폼값의 태그를 위해서는 value속성으로 접근한다.
 	-소스의 정렬을 위해 태그 사이에 불필요한 줄바꾸기나 공백을 주게 되면 그대로 적용되므로 주의해야 한다.
 	 -->
 	<script>
-	function textArea() {
-		/*
-		textarea태그는 value속성은 없으나 javascript에서 접근할 때는 value속성을 통해 값을 가져오거나 변경할 수 있다.
-		*/
-		// textarea의 값을 설정
-		document.getElementById("intro").value = "내용바꿈";
-		// textarea의 값을 읽어와서 변수에 저장됨
-		var v = document.getElementById("intro").value;
-		//JS의 기본경고창을 통해 내용 출력
-		alert(v);
-	}
+		function textArea() {
+			/*
+			textarea태그는 value속성은 없으나 javascript에서 접근할 때는 value속성을 통해 값을 가져오거나 변경할 수 있다.
+			*/
+			// textarea의 값을 설정
+			document.getElementById("intro").value = "내용바꿈";
+			// textarea의 값을 읽어와서 변수에 저장됨
+			var v = document.getElementById("intro").value;
+			//JS의 기본경고창을 통해 내용 출력
+			alert(v);
+		}
 	</script>
 	<h3>textarea태그</h3>
 	<textarea name="intro" id="intro" cols="70" rows="5">내용은 여기에 입력됩니다.</textarea>
-	<input type="button" onclick="textArea();" value = "난버튼"/>
-	
+	<input type="button" onclick="textArea();" value="난버튼" />
+
 	<!-- 
    	onclick 은 클릭이벤트를 감지하는 '이벤트핸들러' 혹은 '이벤트리스너'라고 한다.
     -->
 
 
-   	<!-- 
+	<!-- 
    	-화면상에서는 보이지 않으나 서버로 전송은 필요할때 사용된다.
    	-주로 회원정보수정이나 게시글수정에서 많이 사용된다.
    	-->
-	
+
 	<h3>type = "hidden"</h3>
 	<form action="">
 		<input type="hidden" name="member_id" value="kosmo" />
-		<input type="submit" value="hidden값 전송하기"/>
+		<input type="submit" value="hidden값 전송하기" />
 	</form>
-	
+
 </body>
+
 </html>
