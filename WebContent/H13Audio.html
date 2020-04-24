@@ -4,18 +4,48 @@
         <title>H13Audio.html</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="css/style.css" rel="stylesheet" />
     </head>
 
     <body>
-        <h2>Audio 태그</h2>
+        <!-- <h2>Audio 태그</h2>
 
         <audio src="./media/audio.mp3" autoplay controls>
             audio태그를 지원하지 않는 브라우저입니다.
             <a href="./media/audio.mp3">여기</a>를 클릭해서 다운로드 받으세요.
-        </audio>
+        </audio> -->
 
         <h2>Javascript를 이용한 커스텀 오디오 만들기</h2>
-        Comming SOOOOON~
+        <script>
+            var audio = new Audio("./media/audio.mp3");
+            window.onload = function () {
+                var currentSpan = document.getElementById("current_time");
+                var totalSpan = document.getElementById("total_time");
+                var progress = document.getElementById("progress");
+                audio.addEventListener("timeupdate", function () {
+                    totalSpan.innerHTML = audio.duration;
+                    currentSpan.innerHTML = audio.currentTime;
+                    // 진행바에 최대값 설정 : 총 재생시간 설정
+                    progress.max = audio.duration;
+                    // 진행바에 현재 진행 상황 표시
+                    progress.value = audio.currentTime;
+                });
+            };
+            function play() {
+                audio.play();
+            }
+            function stop() {
+                audio.pause();
+            }
+        </script>
+        <div>
+            <progress value="0" max="" id="progress"></progress>
+        </div>
+        <div>
+            <input type="button" value="PLAY" onclick="play()" />
+            <input type="button" value="STOP" onclick="stop()" /><br />
+            <span id="current_time"></span>
+            /
+            <span id="total_time"></span>
+        </div>
     </body>
 </html>
